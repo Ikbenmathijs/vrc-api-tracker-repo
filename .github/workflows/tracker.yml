@@ -55,10 +55,10 @@ jobs:
         uses: actions/configure-pages@f156874f8191504dae5b037505266ed5dda6c382
         
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: ${{ env.output }}
           
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4.0.5
