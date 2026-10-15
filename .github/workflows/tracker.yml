@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac
         
       - name: VRChat API Tracker Action
-        uses: kemocade/Kemocade.Vrc.Api.Tracker.Action@e3d3d2e17b5c07027ef005c5b458c0b6e5959adc
+        uses: Ikbenmathijs/Kemocade.Vrc.Api.Tracker.Action@a597a07dba8281deb938d5e6eb9a5344a67d57a1
         with:
           output: ${{ env.output }}
           username: ${{ vars.VRCHAT_USERNAME }}
@@ -45,11 +45,7 @@ jobs:
           bot: ${{ secrets.DISCORD_BOT_TOKEN }}
           discords: ${{ vars.DISCORD_GUILD_IDS }}
           channels: ${{ vars.DISCORD_CHANNEL_IDS }}
-          
-      - name: Generate Directory Listings
-        uses: jayanta525/github-pages-directory-listing@19ee734e017b656528749434335f75a1efb931bc
-        with:
-          FOLDER: ${{ env.output }}
+        
           
       - name: Setup Pages
         uses: actions/configure-pages@f156874f8191504dae5b037505266ed5dda6c382
